@@ -204,3 +204,57 @@ const totals = [1,2,3,4];
 const rta = totals.reduce((sum, element) => sum + element, 0);
 console.log(rta)
 ```
+
+## Clase 13 - Some
+
+Este método nos devuelve true o false sí al menos 1 elemento de nuestro array cumple con la condición.
+
+```
+const array = [1, 2, 3, 4, 5];
+
+const even = (element) => element % 2 === 0;
+
+console.log(array.some(even)); // resultado true
+```
+
+Al día de hoy (21/9/21), la librería de fechas date-fns esta en la versión 2.24.0 y funciona correctamente el ejercicio. Sí vienes del futuro, recuerda instalar la versión que usa el profe para evitar incompatibilidades si es que la sintaxis o algo de la misma librería ha sido modificada.
+
+## Clase 15 - Every
+
+Este método es el contrario a some(), devuelve true o false sí TODOS los elementos del array cumplen la condición.
+
+```
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold)); // expected output: true
+
+```
+
+Dejo también mi resolución al reto de esta clase:
+
+```
+const team = [
+  {
+    name: "Nicolas",
+    age: 12,
+  },
+  {
+    name: "Andrea",
+    age: 8,
+  },
+  {
+    name: "Zulema",
+    age: 2,
+  },
+  {
+    name: "Santiago",
+    age: 18,
+  },
+];
+
+const allAreYounger = team.every(item => item.age < 18);
+console.log(areYoung);
+
+```
