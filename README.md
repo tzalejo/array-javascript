@@ -30,7 +30,8 @@ Mutable: es algo que se puede cambiar o agregar.
 Inmutable: es algo que no puede cambiar ni agregar.
 
 Los valores primitivos en js son algo agregado donde solo se pueden reasignar y por lo tanto, todos estos valores son inmutables. Entendamos con un ejemplo.
-``
+
+```
 console.log(name); //javier
 console.log(name2); //javier
 
@@ -38,11 +39,13 @@ name2 = 'platzi';
 
 console.log(name); //javier
 console.log(name2); //platzi''
-``
+```
+
 Si imprimimos name y name2, ambas nos dan javier, pero si reasignamos un valor de name2 y volvemos a imprimir ocurre que solo cambia el valor de name2, lo que demuestra que js guardas estás variables de forma separada, aun cuando el valor de name2 se copio de name. Por eso los valores primitivos son inmutables.
 
 ahora hagamos lo mismo con los objetos.
-``
+
+```
 console.log(person); //{name: 'javier'}
 console.log(person2); //{name: 'javier'}
 
@@ -50,7 +53,8 @@ person2.name = 'platzi';
 
 console.log(person); //{name: 'platzi'}
 console.log(person2); //{name: 'platzi'}
-``
+```
+
 Al inicio obtenemos las mismas propiedades, ahora cambiemos una de las valores de las propiedades y veremos que js cambio el valor tanto de person y peron2, esto debido a que person2 se creo haciendo referencia al objeto person, con reference type js crea una referencia al mismo objeto y el objeto permanece mutable.
 
 ya que el mismo objeto es mutable se puede cambiar o se pueden agregar nuevas propiedades al mismo objeto.
