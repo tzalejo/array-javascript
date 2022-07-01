@@ -107,3 +107,34 @@ console.log(elements.join('-'));
 
 Diferencia prÃ¡ctica entre .forEach()y .map()
 Por si llegan a preguntÃ¡rselo, si, Ã©stos mÃ©todos son muy parecidos, ya que ejecutan una funciÃ³n sobre cada elemento de un array, pero hay una diferencia fundamental: .forEach() no crea o devuelve, por defecto, un nuevo array con los elementos modificados, en cambio .map() si.
+
+## Clase 6 - map reloaded
+
+Usos comunes o clásicos de map() sobre los arrays:
+
+Limpiar datos, seleccionar datos dentro de un array y devolverlos para su utilización en futuras acciones.
+Añadir un nuevo elemento, modificar agregando un nuevo dato al objeto pero sin modificar el array original.
+
+Tener en cuenta que cuando trabajamos con objetos y map() y retornamos el mismo objeto estamos copiando la referencia en memoria que tiene el objeto original que le aplicamos el map() (esto lo vimos en la clase de mutable vs inmutable, te dejo una lectura: https://platzi.com/tutoriales/1642-javascript-profesional/4559-estructuras-de-datos-inmutables/). Esto provoca que como estamos modificando la referencia en memoria, el array original también sea modificado. Entonces en conclusión, por más que map() sea inmutable en este punto estamos copiando la referencia en memoria y por eso hace el cambio en el original.
+
+```
+// Estamos retornando el objeto
+// por ende se copia la refencia en memoria
+const rta = orders.map(item => {
+    item.tax = .19
+    return item;
+})
+```
+
+Para evitarlo, y poder realizar una copia y evitar la referencia en memoria, utilizamos el spread operator de ES6 (https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax), donde generamos un nuevo objeto con los valores del objeto original y luego agregamos el nuevo valor que nos interesa.
+
+```
+const rta = orders.map(item => {
+    // retornamos un nuevo objeto
+    //pero evitamos hacer ref. en memoria
+    return {
+        ...item,
+        tax: .19,
+    }
+})
+```
