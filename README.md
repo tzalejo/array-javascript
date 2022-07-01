@@ -61,3 +61,49 @@ let person2 = {...person}
 ```
 
 Ahora vuelve a ver la clase y veras como todo es m�s claro y entendible.
+
+## clase 4 - Map
+
+Lo más sencillo:
+
+¿Qué hace el .map()? TRANSFORMAR.
+
+.map() es INMUTABLE por lo tanto no modifica el array original, sino que crea uno nuevo con la “transformación” aplicada.
+.
+Además, mantienes el mismo length que el array original, te devuelve en el nuevo array la misma cantidad que el array que le aplicaste el método.
+.
+Código de la clase:
+
+```
+
+const products = [
+            { title: 'Burger', price: 121 },
+            { title: 'Pizza', price: 202 },
+        ];
+        const app = document.getElementById('app');
+        const list = products.map(product => {
+            return `<li>${product.title} - ${product.price}</li>`;
+        })
+
+        app.innerHTML = list.join('');
+```
+
+El método join() une todos los elementos de una matriz (o un objeto similar a una matriz) en una cadena y devuelve esta cadena.
+
+```
+
+const elements = ['Fire', 'Air', 'Water'];
+
+console.log(elements.join());
+// expected "Fire,Air,Water"
+
+console.log(elements.join(''));
+// expected  "FireAirWater"
+
+console.log(elements.join('-'));
+// expected "Fire-Air-Water"
+
+```
+
+Diferencia práctica entre .forEach()y .map()
+Por si llegan a preguntárselo, si, éstos métodos son muy parecidos, ya que ejecutan una función sobre cada elemento de un array, pero hay una diferencia fundamental: .forEach() no crea o devuelve, por defecto, un nuevo array con los elementos modificados, en cambio .map() si.
