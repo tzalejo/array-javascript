@@ -258,3 +258,56 @@ const allAreYounger = team.every(item => item.age < 18);
 console.log(areYoung);
 
 ```
+
+## Clase 16 - Find
+
+El método find() devuelve el primer elemento del array que cumpla con la condición dada o no devuelve undefined si es que no encuentra ningún elemento que cumpla los requisitos pedidos.
+
+```
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find(element => element > 10);
+console.log(found);
+// expected output: 12
+```
+
+En cambio el método findIndex() es una variante que te devuelve el index o posición donde esta ese primer elemento que encuentra con las características de la condición dada. De no encontrar ninguno devuelve -1 como respuesta del return del método.
+
+```
+const array1 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+console.log(array1.findIndex(isLargeNumber));
+// expected output: 3
+```
+
+## Clase 17 - Include
+
+El método includes() determina si una array incluye un determinado elemento, devuelve true o false según corresponda.
+
+```
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// expected output: true
+
+const pets = ['cat', 'dog', 'bat'];
+
+console.log(pets.includes('cat'));
+// expected output: true
+
+console.log(pets.includes('at'));
+// expected output: false
+```
+
+También posee un segundo parámetro que es el fromIndex, que es la posición donde comenzar a buscar el valor en el array.
+
+```
+[1, 2, 3].includes(2);     // true
+[1, 2, 3].includes(4);     // false
+[1, 2, 3].includes(3, 3);  // false
+[1, 2, 3].includes(3, -1); // true
+[1, 2, NaN].includes(NaN); // true
+```
+
+Este fromIndex sí es igual o mayor que el tamaño del array, devuelve false automaticamente sin buscar en el vector. Sí el fromIndex es negativo busca en todo el array. Y para los casos 0, -0, +0 lo toma como cero y también lee todo el array.
