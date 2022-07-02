@@ -330,3 +330,22 @@ console.log(elements.join('-')); // expected output "Fire-Air-Water"
 ```
 
 Y el método split() divide un objeto de tipo String en un array de cadenas mediante la separación de la cadena en sub-cadenas. Acá esta muy bien explicado y con muchos ejemplos: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/split
+
+## clase 22 - Concat
+
+Recordar que al ser inmutable, los arrays (tanto el nuevo como el viejo) quedaran referenciados por memoria, por lo tanto sí modificamos alguno de los dos, los cambios se verán reflejados en ambos.
+
+```
+const array1 = ['a', 'b', 'c'];
+const array2 = ['d', 'e', 'f'];
+const array3 = array1.concat(array2);
+
+console.log(array3);
+// expected output: Array ["a", "b", "c", "d", "e", "f"]
+```
+
+Si estas trabajando con un arrays de Objs igual una forma de copiar cada elemento sin la referencia podría ser:
+
+```
+const newArray = myArray.map(a => ({¿a}));
+```
