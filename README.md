@@ -310,4 +310,23 @@ También posee un segundo parámetro que es el fromIndex, que es la posición donde
 [1, 2, NaN].includes(NaN); // true
 ```
 
+## clase 20 - Join
+
 Este fromIndex sí es igual o mayor que el tamaño del array, devuelve false automaticamente sin buscar en el vector. Sí el fromIndex es negativo busca en todo el array. Y para los casos 0, -0, +0 lo toma como cero y también lee todo el array.
+
+El método join() une todos los elementos de un array en una cadena y devuelve esta cadena. Podemos pasarle cualquier elemento como separador que deseemos.
+
+```
+
+const elements = ['Fire', 'Air', 'Water'];
+
+console.log( elements.join() );
+// expected output "Fire,Air,Water"
+
+console.log(elements.join(''));
+// expected output "FireAirWater"
+
+console.log(elements.join('-')); // expected output "Fire-Air-Water"
+```
+
+Y el método split() divide un objeto de tipo String en un array de cadenas mediante la separación de la cadena en sub-cadenas. Acá esta muy bien explicado y con muchos ejemplos: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/split
