@@ -323,6 +323,7 @@ holaMundo.splice(index, 0, ¿Roberto¿)
 y listo, pones tu index de celcilia, no le ponemos un 1 porque no queremos eliminar ningún elemento hacia la derecha sino un 0, pones la coma y pones el o los elementos que quieres agregar allí.
 
 ## clase 22 - Concat
+El método concat() se usa para unir dos o más arrays. Este método no cambia los arrays existentes, sino que devuelve un nuevo array.
 
 Recordar que al ser inmutable, los arrays (tanto el nuevo como el viejo) quedaran referenciados por memoria, por lo tanto sí modificamos alguno de los dos, los cambios se verán reflejados en ambos.
 
