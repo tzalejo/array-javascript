@@ -331,6 +331,24 @@ console.log(elements.join('-')); // expected output "Fire-Air-Water"
 
 Y el método split() divide un objeto de tipo String en un array de cadenas mediante la separación de la cadena en sub-cadenas. Acá esta muy bien explicado y con muchos ejemplos: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/split
 
+El metodo .splice(), no solamente sirve para borrar en cierta forma un elemento sino también para agregarlos al index del array que tu quieres.Ej:
+
+Tenemos el siguiente array:
+
+```
+const holaMundo = [¿Maria¿, ¿Andres¿, ¿Cecilia¿];
+```
+
+Y quizás lo que quieres es añadir a ¿Roberto¿ después de Andres y antes de cecilia.
+
+Buscamos el index con el findIndex de cecilia tal como el profe nos enseño.
+
+```
+holaMundo.splice(index, 0, ¿Roberto¿)
+```
+
+y listo, pones tu index de celcilia, no le ponemos un 1 porque no queremos eliminar ningún elemento hacia la derecha sino un 0, pones la coma y pones el o los elementos que quieres agregar allí.
+
 ## clase 22 - Concat
 
 Recordar que al ser inmutable, los arrays (tanto el nuevo como el viejo) quedaran referenciados por memoria, por lo tanto sí modificamos alguno de los dos, los cambios se verán reflejados en ambos.
@@ -379,3 +397,38 @@ console.log('FLattened Array', flattenedArray); // Flattened Array: [1]
 ```
 
 Cuando quieres aplanar un elemento que es un array vacío, flat() simplemente remueve el array, por lo tanto, podemos usar flatMap para que se comporte como una especie de filtro si es que lo necesitamos. ¿¿
+
+## Clase 27 - Sort
+
+El método sort() ordena los elementos de un arreglo (array) localmente y devuelve el arreglo ordenado. La ordenación no es necesariamente estable. El modo de ordenación por defecto responde a la posición del valor del string de acuerdo a su valor Unicode.
+
+```
+arr.sort([compareFunction])
+let frutas = ['guindas', 'manzanas', 'bananas'];
+frutas.sort(); // ['bananas', 'guindas', 'manzanas']
+
+let puntos = [1, 10, 2, 21];
+puntos.sort(); // [1, 10, 2, 21]
+// Tenga en cuenta que 10 viene antes que 2
+// porque '10' viene antes que '2' según la posición del valor Unicode.
+
+let cosas = ['word', 'Word', '1 Word', '2 Words'];
+cosas.sort(); // ['1 Word', '2 Words', 'Word', 'word']
+// En Unicode, los números vienen antes que las letras mayúsculas
+// y estas vienen antes que las letras minúsculas.
+
+let arr = ['80', '9', '700', 40, 1, 5, 200];
+function comparar(a, b) {
+  return a - b;
+}
+console.log('original:', arr.join());
+console.log('ordenado sin función:', arr.sort());
+console.log('ordenado con función:', arr.sort(comparar));
+```
+
+¿Por qué a - b o b - a?
+La función que le enviamos a sort es la función compareFn donde:
+
+Si compareFn(a, b) devuelve un valor mayor que 0, ordena b antes a.
+Si compareFn(a, b) devuelve un valor menor que 0, ordena a antes b.
+Si compareFn(a, b) devuelve 0 a y b se consideran iguales.
