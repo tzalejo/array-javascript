@@ -353,10 +353,10 @@ Con flatMap puedes filtrar elementos, por ejemplo:
 
 ```
 const numbers = [1, 2, 3, -4, -3, -7];
-filterNumbers = numbers.faltMap(number => {
+filterNumbers = numbers.flatMap(number => {
    return number < 0 ? [] : [number]
 });
-console.log('Filtered Number', filterNumbers); // Filterd Nimbers: [1,2,3,7]
+console.log('Filtered Number', filterNumbers); // Filterd Numbers: [1,2,3]
 
 ```
 
