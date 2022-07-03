@@ -64,15 +64,15 @@ Ahora vuelve a ver la clase y veras como todo es m‡s claro y entendible.
 
 ## clase 4 - Map
 
-Lo mÃ¡s sencillo:
+Lo más sencillo:
 
-Â¿QuÃ© hace el .map()? TRANSFORMAR.
+¿Qué hace el .map()? TRANSFORMAR.
 
-.map() es INMUTABLE por lo tanto no modifica el array original, sino que crea uno nuevo con la â€œtransformaciÃ³nâ€ aplicada.
+.map() es INMUTABLE por lo tanto no modifica el array original, sino que crea uno nuevo con la “transformación” aplicada.
 .
-AdemÃ¡s, mantienes el mismo length que el array original, te devuelve en el nuevo array la misma cantidad que el array que le aplicaste el mÃ©todo.
+Además, mantienes el mismo length que el array original, te devuelve en el nuevo array la misma cantidad que el array que le aplicaste el método.
 .
-CÃ³digo de la clase:
+Código de la clase:
 
 ```
 
@@ -88,7 +88,7 @@ const products = [
         app.innerHTML = list.join('');
 ```
 
-El mÃ©todo join() une todos los elementos de una matriz (o un objeto similar a una matriz) en una cadena y devuelve esta cadena.
+El metodo join() une todos los elementos de una matriz (o un objeto similar a una matriz) en una cadena y devuelve esta cadena.
 
 ```
 
@@ -105,7 +105,7 @@ console.log(elements.join('-'));
 
 ```
 
-Diferencia prÃ¡ctica entre .forEach()y .map()
+Diferencia practica entre .forEach()y .map()
 Por si llegan a preguntÃ¡rselo, si, Ã©stos mÃ©todos son muy parecidos, ya que ejecutan una funciÃ³n sobre cada elemento de un array, pero hay una diferencia fundamental: .forEach() no crea o devuelve, por defecto, un nuevo array con los elementos modificados, en cambio .map() si.
 
 ## Clase 6 - map reloaded
