@@ -105,8 +105,8 @@ console.log(elements.join('-'));
 
 ```
 
-Diferencia practica entre .forEach()y .map()
-Por si llegan a preguntÃ¡rselo, si, Ã©stos mÃ©todos son muy parecidos, ya que ejecutan una funciÃ³n sobre cada elemento de un array, pero hay una diferencia fundamental: .forEach() no crea o devuelve, por defecto, un nuevo array con los elementos modificados, en cambio .map() si.
+Diferencia práctica entre .forEach()y .map()
+Por si llegan a preguntárselo, si, éstos métodos son muy parecidos, ya que ejecutan una función sobre cada elemento de un array, pero hay una diferencia fundamental: .forEach() no crea o devuelve, por defecto, un nuevo array con los elementos modificados, en cambio .map() si.
 
 ## Clase 6 - map reloaded
 
