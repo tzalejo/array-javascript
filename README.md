@@ -349,3 +349,33 @@ Si estas trabajando con un arrays de Objs igual una forma de copiar cada element
 ```
 const newArray = myArray.map(a => ({¿a}));
 ```
+
+## clase 24-Flat y FlatMap
+
+flatMap() es un método que primero mapea cada elemento, y después aplana el resultado en un nuevo array.
+Es idéntico a hacer un map() seguido de un flat() de profundidad 1.
+Si necesitas hacer un flat de mayor profundidad, es mejor usar los métodos por separado, en lugar de usar flatMap().
+
+Usando flatMap como filtro
+Con flatMap puedes filtrar elementos, por ejemplo:
+
+```
+const numbers = [1, 2, 3, -4, -3, -7];
+filterNumbers = numbers.faltMap(number => {
+   return number < 0 ? [] : [number]
+});
+console.log('Filtered Number', filterNumbers); // Filterd Nimbers: [1,2,3,7]
+
+```
+
+Pero, ¿cómo funciona?
+Funciona gracias al array vacío, ejemplo:
+
+```
+const arr = [[], 1];
+flattenedArray = arr.flat();
+console.log('FLattened Array', flattenedArray); // Flattened Array: [1]
+
+```
+
+Cuando quieres aplanar un elemento que es un array vacío, flat() simplemente remueve el array, por lo tanto, podemos usar flatMap para que se comporte como una especie de filtro si es que lo necesitamos. ¿¿
