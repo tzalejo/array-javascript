@@ -232,33 +232,6 @@ console.log(array1.every(isBelowThreshold)); // expected output: true
 
 ```
 
-Dejo también mi resolución al reto de esta clase:
-
-```
-const team = [
-  {
-    name: "Nicolas",
-    age: 12,
-  },
-  {
-    name: "Andrea",
-    age: 8,
-  },
-  {
-    name: "Zulema",
-    age: 2,
-  },
-  {
-    name: "Santiago",
-    age: 18,
-  },
-];
-
-const allAreYounger = team.every(item => item.age < 18);
-console.log(areYoung);
-
-```
-
 ## Clase 16 - Find
 
 El método find() devuelve el primer elemento del array que cumpla con la condición dada o no devuelve undefined si es que no encuentra ningún elemento que cumpla los requisitos pedidos.
